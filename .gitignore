@@ -17,3 +17,5 @@ wheels/
 .tmp
 
 .user.yml
+
+*.code-workspace
