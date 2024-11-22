@@ -8,14 +8,12 @@ This repository contains an example for the [dagster-pyiceberg](https://jasperhg
 
 It is intended to be used together with these example projects:
 
-- Postgresql backend
-- Polaris backend
+- [dagster-pyiceberg-example-postgres](https://github.com/JasperHG90/dagster-pyiceberg-example-postgres)
+- [dagster-pyiceberg-example-polaris](https://github.com/JasperHG90/dagster-pyiceberg-example-polaris)
 
 ## The example
 
 This example ingests measured air quality data for 99 stations in The Netherlands from the [Luchtmeetnet API](https://api-docs.luchtmeetnet.nl/).
-
-This example contains three assets:
 
 This example contains three assets:
 
