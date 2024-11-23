@@ -554,8 +554,8 @@ wheels = [
 
 [[package]]
 name = "dagster-pyiceberg"
-version = "0.2.0"
-source = { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.0/dagster_pyiceberg-0.2.0-py3-none-any.whl" }
+version = "0.2.1"
+source = { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl" }
 dependencies = [
     { name = "dagster" },
     { name = "pendulum" },
@@ -563,7 +563,7 @@ dependencies = [
     { name = "tenacity" },
 ]
 wheels = [
-    { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.0/dagster_pyiceberg-0.2.0-py3-none-any.whl", hash = "sha256:4746eb02d7857030f8361f5789ce74fd7a3bcf6dd101adb652dfcb83ab8e6b4d" },
+    { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl", hash = "sha256:7afce6e0c0ed3e5a0b7ff58a34334561b00b2ce2c3a30df1bc7068c7727f0a18" },
 ]
 
 [package.optional-dependencies]
@@ -1135,7 +1135,7 @@ requires-dist = [
     { name = "dagit", specifier = ">=1.9.0" },
     { name = "dagster", specifier = ">=1.9.0" },
     { name = "dagster-aws", specifier = ">=0.25.0" },
-    { name = "dagster-pyiceberg", extras = ["polars"], url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.0/dagster_pyiceberg-0.2.0-py3-none-any.whl" },
+    { name = "dagster-pyiceberg", extras = ["polars"], url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl" },
     { name = "httpx", specifier = ">=0.27.2" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydantic", specifier = ">=2.9.2" },
