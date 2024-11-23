@@ -103,7 +103,7 @@ def warehouse_io_manager(
         config=IcebergCatalogConfig(
             properties=catalog_config_properties,
         ),
-        schema=namespace,
+        namespace=namespace,
     )
 
 
