@@ -25,8 +25,6 @@ resources = {
     "warehouse_io_manager": IcebergPolarsIOManager(
         name="dagster_example_catalog",
         namespace="air_quality",
-        partition_spec_update_mode="update",
-        schema_update_mode="update",
         db_io_manager="custom",
     ),
     "luchtmeetnet_api": LuchtMeetNetResource(
