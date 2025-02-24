@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version < '3.12'",
@@ -395,7 +396,7 @@ name = "click"
 version = "8.1.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de", size = 336121 }
 wheels = [
@@ -486,11 +487,11 @@ dependencies = [
     { name = "jinja2" },
     { name = "packaging" },
     { name = "protobuf" },
-    { name = "psutil", marker = "platform_system == 'Windows'" },
+    { name = "psutil", marker = "sys_platform == 'win32'" },
     { name = "pydantic" },
     { name = "python-dotenv" },
     { name = "pytz" },
-    { name = "pywin32", marker = "platform_system == 'Windows'" },
+    { name = "pywin32", marker = "sys_platform == 'win32'" },
     { name = "pyyaml" },
     { name = "requests" },
     { name = "rich" },
@@ -502,7 +503,7 @@ dependencies = [
     { name = "toposort" },
     { name = "tqdm" },
     { name = "typing-extensions" },
-    { name = "tzdata", marker = "platform_system == 'Windows'" },
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
     { name = "universal-pathlib" },
     { name = "watchdog" },
 ]
@@ -544,26 +545,18 @@ wheels = [
 ]
 
 [[package]]
-name = "dagster-pipes"
-version = "1.9.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c8/7b/0b3ed3aec99879b775ef4139a97f23d1eb7e60bf5e23d2e9f92e949fcafe/dagster-pipes-1.9.0.tar.gz", hash = "sha256:d6953c19ff2638d9df71638ebe88598d67660cfdf07a4ad2efdd5456e1a09406", size = 17274 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/11/2e/20b1b230e42db445d52c4cf57d6f6b036eacae6fef0b2f17830b5ec31cdf/dagster_pipes-1.9.0-py3-none-any.whl", hash = "sha256:958ee74b30987905d014bbc18b6f0ab50edad48855441e5bf4bbba512a913278", size = 17098 },
-]
-
-[[package]]
-name = "dagster-pyiceberg"
+name = "dagster-iceberg"
 version = "0.2.1"
-source = { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dagster" },
     { name = "pendulum" },
     { name = "pyiceberg", extra = ["pyarrow"] },
     { name = "tenacity" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/f9/81/65e800c3f182bdddef0eaf6cf6dd6d4cbefa6d497d1466f0af797aff3aa5/dagster_iceberg-0.2.1.tar.gz", hash = "sha256:a330427d6f3edb0b96ac83c2eb23df3c04210d74d63d129dd95a7c0d63bacf9c", size = 1860804 }
 wheels = [
-    { url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl", hash = "sha256:7afce6e0c0ed3e5a0b7ff58a34334561b00b2ce2c3a30df1bc7068c7727f0a18" },
+    { url = "https://files.pythonhosted.org/packages/ff/48/66f26a658a12c9548744cf63fdc40bf3923716ca30a2577ab41bc8c84200/dagster_iceberg-0.2.1-py3-none-any.whl", hash = "sha256:0297c5eb7b9af1738bc2bd55ef77213307d914824d01bb08bd4bcd5b65bca15d", size = 30271 },
 ]
 
 [package.optional-dependencies]
@@ -571,15 +564,13 @@ polars = [
     { name = "polars" },
 ]
 
-[package.metadata]
-requires-dist = [
-    { name = "dagster", specifier = ">=1.8.2" },
-    { name = "getdaft", marker = "extra == 'daft'", specifier = ">=0.3.13" },
-    { name = "pandas", marker = "extra == 'pandas'", specifier = ">=2.2.3" },
-    { name = "pendulum", specifier = ">=3.0.0" },
-    { name = "polars", marker = "extra == 'polars'", specifier = ">=1.13.1" },
-    { name = "pyiceberg", extras = ["pyarrow"], specifier = ">=0.8" },
-    { name = "tenacity", specifier = ">=8.5.0" },
+[[package]]
+name = "dagster-pipes"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c8/7b/0b3ed3aec99879b775ef4139a97f23d1eb7e60bf5e23d2e9f92e949fcafe/dagster-pipes-1.9.0.tar.gz", hash = "sha256:d6953c19ff2638d9df71638ebe88598d67660cfdf07a4ad2efdd5456e1a09406", size = 17274 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/2e/20b1b230e42db445d52c4cf57d6f6b036eacae6fef0b2f17830b5ec31cdf/dagster_pipes-1.9.0-py3-none-any.whl", hash = "sha256:958ee74b30987905d014bbc18b6f0ab50edad48855441e5bf4bbba512a913278", size = 17098 },
 ]
 
 [[package]]
@@ -999,7 +990,7 @@ name = "ipykernel"
 version = "6.29.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "appnope", marker = "platform_system == 'Darwin'" },
+    { name = "appnope", marker = "sys_platform == 'darwin'" },
     { name = "comm" },
     { name = "debugpy" },
     { name = "ipython" },
@@ -1111,7 +1102,7 @@ dependencies = [
     { name = "dagit" },
     { name = "dagster" },
     { name = "dagster-aws" },
-    { name = "dagster-pyiceberg", extra = ["polars"] },
+    { name = "dagster-iceberg", extra = ["polars"] },
     { name = "httpx" },
     { name = "pandas" },
     { name = "pydantic" },
@@ -1120,7 +1111,7 @@ dependencies = [
     { name = "redis" },
 ]
 
-[package.dependency-groups]
+[package.dev-dependencies]
 dev = [
     { name = "ipykernel" },
     { name = "pre-commit" },
@@ -1135,7 +1126,7 @@ requires-dist = [
     { name = "dagit", specifier = ">=1.9.0" },
     { name = "dagster", specifier = ">=1.9.0" },
     { name = "dagster-aws", specifier = ">=0.25.0" },
-    { name = "dagster-pyiceberg", extras = ["polars"], url = "https://github.com/JasperHG90/dagster-pyiceberg/releases/download/v0.2.1/dagster_pyiceberg-0.2.1-py3-none-any.whl" },
+    { name = "dagster-iceberg", extras = ["polars"], specifier = ">=0.2.1" },
     { name = "httpx", specifier = ">=0.27.2" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydantic", specifier = ">=2.9.2" },
@@ -1144,7 +1135,7 @@ requires-dist = [
     { name = "redis", specifier = ">=5.2.0" },
 ]
 
-[package.metadata.dependency-groups]
+[package.metadata.requires-dev]
 dev = [
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "pre-commit", specifier = ">=4.0.1" },
@@ -1719,6 +1710,7 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ce/ac/5b1ea50fc08a9df82de7e1771537557f07c2632231bbab652c7e22597908/psycopg2_binary-2.9.10-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:bb89f0a835bcfc1d42ccd5f41f04870c1b936d8507c6df12b7737febc40f0909", size = 2822712 },
     { url = "https://files.pythonhosted.org/packages/c4/fc/504d4503b2abc4570fac3ca56eb8fed5e437bf9c9ef13f36b6621db8ef00/psycopg2_binary-2.9.10-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:f0c2d907a1e102526dd2986df638343388b94c33860ff3bbe1384130828714b1", size = 2920155 },
     { url = "https://files.pythonhosted.org/packages/b2/d1/323581e9273ad2c0dbd1902f3fb50c441da86e894b6e25a73c3fda32c57e/psycopg2_binary-2.9.10-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:f8157bed2f51db683f31306aa497311b560f2265998122abe1dce6428bd86567", size = 2959356 },
+    { url = "https://files.pythonhosted.org/packages/08/50/d13ea0a054189ae1bc21af1d85b6f8bb9bbc5572991055d70ad9006fe2d6/psycopg2_binary-2.9.10-cp313-cp313-win_amd64.whl", hash = "sha256:27422aa5f11fbcd9b18da48373eb67081243662f9b46e6fd07c3eb46e4535142", size = 2569224 },
 ]
 
 [[package]]
@@ -2394,7 +2386,7 @@ name = "tqdm"
 version = "4.66.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e9/34/bef135b27fe1864993a5284ad001157ee9b5538e859ac90f5b0e8cc8c9ec/tqdm-4.66.6.tar.gz", hash = "sha256:4bdd694238bef1485ce839d67967ab50af8f9272aab687c0d7702a01da0be090", size = 169533 }
 wheels = [

@@ -2,7 +2,7 @@ import os
 
 from dagster import Definitions, EnvVar
 from dagster_aws.s3 import S3PickleIOManager, S3Resource
-from dagster_pyiceberg.io_manager.polars import IcebergPolarsIOManager
+from dagster_iceberg.io_manager.polars import IcebergPolarsIOManager
 
 from luchtmeetnet.assets import (
     air_quality_data,

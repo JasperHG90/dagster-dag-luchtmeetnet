@@ -2,8 +2,8 @@ from typing import Dict, Iterator
 
 import pytest
 from dagster import FilesystemIOManager
-from dagster_pyiceberg.config import IcebergCatalogConfig
-from dagster_pyiceberg.io_manager.polars import IcebergPolarsIOManager
+from dagster_iceberg.config import IcebergCatalogConfig
+from dagster_iceberg.io_manager.polars import IcebergPolarsIOManager
 from pyiceberg.catalog import Catalog, load_catalog
 from testcontainers.redis import RedisContainer
 

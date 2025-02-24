@@ -1,10 +1,10 @@
 # dagster-pyiceberg example using postgresql catalog
 
-> [!WARNING] dagster-pyiceberg is in development
+> [!WARNING] dagster-iceberg is in development
 >
-> The `dagster-pyiceberg` library is in development.
+> The `dagster-iceberg` library is in development.
 
-This repository contains an example for the [dagster-pyiceberg](https://jasperhg90.github.io/dagster-pyiceberg/) IO manager.
+This repository contains an example for the [dagster-iceberg](https://github.com/dagster-io/community-integrations/tree/main/libraries/dagster-iceberg) IO manager.
 
 It is intended to be used together with these example projects:
 
